@@ -411,20 +411,18 @@ const JOBS=[
   tag:{fr:"Autorité architecturale, gouvernance et direction technique de plateformes mission-critiques.",en:"Architectural authority, governance and technical direction for mission-critical platforms."},
   b:{fr:["Dirigé l'architecture de bout en bout de 3 portefeuilles mission-critiques couvrant 30 applications Azure multi-région, du cadrage du besoin métier à la mise en production, avec un SLA de 99,9%+ et un PRA dimensionné (RTO < 1h / RPO < 15 min).",
        "Conçu une architecture event-driven temps-réel (Spark Structured Streaming, CQRS, Saga) pour le trading batteries Flex GB, réduisant la latence de décision Day-Ahead de 40%.",
-       "Conçu et gouverné une plateforme GenAI d'entreprise sur Azure AI Foundry : un assistant de connaissance (RAG) pour les équipes trading et opérations, grounded sur les référentiels internes (procédures, contrats, notes de marché), servi par GPT-4o avec recherche vectorielle (embeddings text-embedding-3-large).",
-       "Posé les fondations de production : AI Gateway (APIM mode GenAI) — quotas de tokens par application, routage PTU avec débordement PAYG, content safety en policy — en accès keyless (Entra ID, identités managées, private endpoints, VNet managé), avec maîtrise des coûts (arbitrage PTU/PAYG).",
+       "Conçu l'architecture d'intégration de la plateforme de modélisation carbone (horizon 2050) développée par l'équipe data science : contrats d'interface, MLOps (Databricks/MLflow), sécurité & gouvernance des données — faisabilité et intégrité garanties.",
        "Formalisé la chaîne documentaire d'architecture (vues conceptuelle/logique/technique, HLD, LLD, ADR) défendue en ARB et Design Authority, réduisant le délai de validation de 35% pour 8 équipes.",
        "Réduit les coûts cloud de 25% (landing zones partagées, scaling AKS/Databricks) en imposant le chiffrement at-rest/in-transit (TLS/mTLS, Key Vault).",
        "Mentoré 20 architectes & ingénieurs et conduit les initiatives d'optimisation des coûts avec les équipes SOM et Enterprise Architecture."],
      en:["Led the end-to-end architecture of 3 mission-critical portfolios across 30 multi-region Azure applications, from framing to production, with a 99.9%+ SLA and a DR plan (RTO < 1h / RPO < 15 min).",
        "Designed a real-time event-driven architecture (Spark Structured Streaming, CQRS, Saga) for Flex GB battery trading, reducing Day-Ahead decision latency by 40%.",
-       "Designed and governed an enterprise GenAI platform on Azure AI Foundry: a knowledge assistant (RAG) for trading and operations teams, grounded on internal references (procedures, contracts, market notes), served by GPT-4o with vector search (text-embedding-3-large embeddings).",
-       "Set the production foundations: AI Gateway (APIM GenAI mode) — per-application token quotas, PTU routing with PAYG overflow, content-safety policies — with keyless access (Entra ID, managed identities, private endpoints, managed VNet) and cost control (PTU/PAYG trade-offs).",
+       "Designed the integration architecture for the carbon modeling platform (2050 horizon) built by the data science team: interface contracts, MLOps (Databricks/MLflow), security & data governance — feasibility and integrity guaranteed.",
        "Formalized the architecture documentation chain (conceptual/logical/technical views, HLD, LLD, ADR) defended in ARB and Design Authority, cutting approval time by 35% for 8 teams.",
        "Reduced cloud costs by 25% (shared landing zones, AKS/Databricks scaling) while enforcing at-rest/in-transit encryption (TLS/mTLS, Key Vault).",
        "Mentored 20 architects & engineers and led cost-optimization initiatives with the SOM and Enterprise Architecture teams."]},
-  meta:{fr:"<b>Livrables :</b> DAT, HLD, LLD, ADR, matrices de flux & d'impacts, dossier PRA/PCA. · <b>Env. tech. :</b> Azure AI Foundry, Azure OpenAI (GPT-4o, text-embedding-3-large), RAG / Azure AI Search, AI Gateway (APIM mode GenAI), Content Safety, Entra ID & identités managées, Private Endpoints, AKS, Databricks, Spark Structured Streaming, Event Hubs, Cosmos DB, Key Vault, Terraform, Bicep.",
-       en:"<b>Deliverables:</b> DAT, HLD, LLD, ADR, flow & impact matrices, DR/BCP plan. · <b>Tech:</b> Azure AI Foundry, Azure OpenAI (GPT-4o, text-embedding-3-large), RAG / Azure AI Search, AI Gateway (APIM GenAI mode), Content Safety, Entra ID & managed identities, Private Endpoints, AKS, Databricks, Spark Structured Streaming, Event Hubs, Cosmos DB, Key Vault, Terraform, Bicep."}},
+  meta:{fr:"<b>Livrables :</b> DAT, HLD, LLD, ADR, matrices de flux & d'impacts, dossier PRA/PCA. · <b>Env. tech. :</b> Azure (AKS, Databricks, Event Hubs, Synapse, APIM, Functions, Key Vault, WAF, Cosmos DB), Spark, TensorFlow/Keras, Terraform, Bicep.",
+       en:"<b>Deliverables:</b> DAT, HLD, LLD, ADR, flow & impact matrices, DR/BCP plan. · <b>Tech:</b> Azure (AKS, Databricks, Event Hubs, Synapse, APIM, Functions, Key Vault, WAF, Cosmos DB), Spark, TensorFlow/Keras, Terraform, Bicep."}},
 
  {co:"ENEDIS — Département Data (Chaîne de valeur Données / B4ALL)",date:{fr:"Juil 2020 – Fév 2022",en:"Jul 2020 – Feb 2022"},
   ro:{fr:"Architecte Solution Senior · Paris, France · Agile / SAFe",en:"Senior Solution Architect · Paris, France · Agile / SAFe"},
@@ -585,11 +583,4 @@ function setLang(l){document.documentElement.lang=l;
   function update(){const a=current();
     links.forEach(L=>L.classList.toggle('active',L.getAttribute('href')==='#'+a));
     const h=document.documentElement.scrollHeight-window.innerHeight;
-    if(bar)bar.style.width=(h>0?(window.scrollY/h*100):0)+'%';}
-  let tick=false;
-  window.addEventListener('scroll',()=>{if(!tick){requestAnimationFrame(()=>{update();tick=false});tick=true}},{passive:true});
-  window.addEventListener('resize',update);update();
-})();
-</script>
-</body>
-</html>
+    if(bar)bar.style.width=(h>0?(window.scr
