@@ -295,7 +295,7 @@
         <span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M9 3.5h6v2.2H9zM8.4 11l1.6 1.6 3-3.4M8.4 16.2l1.6 1.6 3-3.4"/></svg></span>
         <h3 data-lang="fr">Gouvernance &amp; standards (TOGAF)</h3><h3 data-lang="en">Governance &amp; standards (TOGAF)</h3>
         <p data-lang="fr">Pilotage d'instances (Design Authority, comités d'architecture) et livrables décisionnels : DAT, HLD/LLD, ADR, cartographie applicative.</p>
-        <p data-lang="en">Driving governance bodies (Design Authority, architecture committees) and decision-ready deliverables: DAT, HLD/LLD, ADR, application landscape maps.</p>
+        <p data-lang="en">Driving governance bodies (Design Authority, architecture committees) and decision-ready deliverables: TAD, HLD/LLD, ADR, application landscape maps.</p>
       </div>
       <div class="pillar reveal">
         <span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.4"/><circle cx="19" cy="5.5" r="2.4"/><circle cx="19" cy="18.5" r="2.4"/><path d="M7.1 11l9.8-4.5M7.1 13l9.8 4.5"/></svg></span>
@@ -385,24 +385,22 @@
 
 <script>
 const SKILLS=[
- {feat:true,ic:"📐",fr:["Frameworks & modélisation","TOGAF, ArchiMate, C4 Model, UML, BPMN · BiZZdesign, SAP PowerDesigner, Structurizr, Visio, Lucidchart"],
-   en:["Frameworks & modeling","TOGAF, ArchiMate, C4 Model, UML, BPMN · BiZZdesign, SAP PowerDesigner, Structurizr, Visio, Lucidchart"]},
- {ic:"🗺️",fr:["Architecture cible, trajectoires & livrables","Architecture cible & de transition, urbanisation du SI, cartographie applicative, gap analysis, DAT, HLD/LLD, ADR, diagrammes d'architecture / de flux / d'interfaces, matrices de flux & d'impacts"],
-   en:["Target architecture, roadmaps & deliverables","Target & transition architecture, IS urbanization, application landscape mapping, gap analysis, DAT, HLD/LLD, ADR, architecture / flow / interface diagrams, flow & impact matrices"]},
- {ic:"☁️",fr:["Cloud & multi-cloud (Azure / AWS / GCP)","Azure (AKS, APIM, Event Hubs, Functions, Key Vault) · AWS (EKS, Lambda, API Gateway, MSK, S3, DynamoDB, IAM, Cognito, Redshift, SageMaker) · GCP (notions, équivalences AWS↔GCP) · Terraform, Bicep, Helm, Kubernetes, Docker"],
-   en:["Cloud & multi-cloud (Azure / AWS / GCP)","Azure (AKS, APIM, Event Hubs, Functions, Key Vault) · AWS (EKS, Lambda, API Gateway, MSK, S3, DynamoDB, IAM, Cognito, Redshift, SageMaker) · GCP (working knowledge, AWS↔GCP equivalences) · Terraform, Bicep, Helm, Kubernetes, Docker"]},
- {ic:"🧩",fr:["Architectures distribuées & microservices","Systèmes distribués à forte volumétrie, architectures transactionnelles à grande échelle, Microservices, Event-Driven & Real-Time, Event Sourcing, Saga, BFF, Strangler Fig, Data Mesh, Lakehouse, DDD, Polyglot Persistence"],
-   en:["Distributed systems & microservices","High-volume distributed systems, large-scale transactional architectures, Microservices, Event-Driven & Real-Time, Event Sourcing, Saga, BFF, Strangler Fig, Data Mesh, Lakehouse, DDD, Polyglot Persistence"]},
- {ic:"🔌",fr:["API & intégration","API-first, API Design (REST, OpenAPI/Swagger), API Management (Kong, AWS API Gateway, Azure APIM), versioning & contrats d'interface, patterns d'intégration inter-systèmes"],
-   en:["API & integration","API-first, API Design (REST, OpenAPI/Swagger), API Management (Kong, AWS API Gateway, Azure APIM), versioning & interface contracts, cross-system integration patterns"]},
- {ic:"🔒",fr:["Sécurité & IAM/CIAM","Zero Trust, Defense in Depth, IAM/CIAM, authentification & autorisation, gestion des tokens (OAuth2/OIDC, JWT, PKCE, SAML), mTLS, PKI, Key Management, chiffrement at-rest/in-transit, OWASP, alignement ISO 27001 / RGPD"],
-   en:["Security & IAM/CIAM","Zero Trust, Defense in Depth, IAM/CIAM, authentication & authorization, token management (OAuth2/OIDC, JWT, PKCE, SAML), mTLS, PKI, Key Management, encryption at-rest/in-transit, OWASP, ISO 27001 / GDPR alignment"]},
- {ic:"🗄️",fr:["Données & persistance","Oracle, PostgreSQL, SQL Server, MongoDB, Cassandra, DynamoDB, Elasticsearch, Cloudera/HDP (Spark, HDFS, Hive)"],
-   en:["Data & persistence","Oracle, PostgreSQL, SQL Server, MongoDB, Cassandra, DynamoDB, Elasticsearch, Cloudera/HDP (Spark, HDFS, Hive)"]},
- {ic:"⚙️",fr:["Développement & DevSecOps","Java/Spring Boot, Python, Scala, REST/OpenAPI, Angular, React · GitLab CI, Jenkins, SonarQube, Checkmarx, Artifactory"],
-   en:["Development & DevSecOps","Java/Spring Boot, Python, Scala, REST/OpenAPI, Angular, React · GitLab CI, Jenkins, SonarQube, Checkmarx, Artifactory"]},
- {ic:"🤖",fr:["IA/ML — Architecture & Intégration","Architecture d'intégration de plateformes ML dans le SI : Computer Vision (CNN, EfficientNet), prévision time-series (LSTM, XGBoost, Prophet), MLOps (MLflow, SageMaker) — contrats d'interface, gouvernance données & sécurité, ADR de faisabilité"],
-   en:["AI/ML — Architecture & Integration","Integration architecture for ML platforms within the IS: Computer Vision (CNN, EfficientNet), time-series forecasting (LSTM, XGBoost, Prophet), MLOps (MLflow, SageMaker) — interface contracts, data & security governance, feasibility ADRs"]},
+ {feat:true,ic:"📐",fr:["Frameworks, Gouvernance & Livrables d'architecture","TOGAF, ArchiMate, DAT, HLD, LLD, ADR, modèles C4, matrices de flux et d'impacts, dossier PRA/PCA, DAG, diagrammes d'architecture, modèle de données, patterns de référence, contrats d'API (OpenAPI)…"],
+   en:["Frameworks, Governance & Architecture Deliverables","TOGAF, ArchiMate, TAD (Technical Architecture Document), HLD, LLD, ADR, C4 models, flow & impact matrices, DR/BCP plan, architecture diagrams, data model, reference patterns, API contracts (OpenAPI)…"]},
+ {ic:"🤖",fr:["IA/ML — Architecture & Intégration","Architecture d'intégration de capacités IA/ML dans le SI d'entreprise. GenAI sur Azure AI Foundry : Azure OpenAI (GPT-4o), RAG / Azure AI Search, embeddings (text-embedding-3-large), AI Gateway (APIM mode GenAI), Content Safety. Computer Vision (CNN, EfficientNet), TensorFlow/Keras. Contrats d'interface, gouvernance données & sécurité, ADR de faisabilité."],
+   en:["AI/ML — Architecture & Integration","Integration architecture for AI/ML capabilities within the enterprise IS. GenAI on Azure AI Foundry: Azure OpenAI (GPT-4o), RAG / Azure AI Search, embeddings (text-embedding-3-large), AI Gateway (APIM GenAI mode), Content Safety. Computer Vision (CNN, EfficientNet), TensorFlow/Keras. Interface contracts, data & security governance, feasibility ADRs."]},
+ {ic:"🧩",fr:["Patterns d'architecture applicative et data","Microservices, EDA, CQRS/Event Sourcing, Saga, API Gateway & BFF, Strangler Fig, Data Mesh, Lakehouse, Lambda/Kappa Architecture, DDD, Polyglot Persistence"],
+   en:["Application & Data Architecture Patterns","Microservices, EDA, CQRS/Event Sourcing, Saga, API Gateway & BFF, Strangler Fig, Data Mesh, Lakehouse, Lambda/Kappa Architecture, DDD, Polyglot Persistence"]},
+ {ic:"☁️",fr:["Cloud (Azure / AWS)","AKS, APIM, Databricks, Synapse, Event Hubs, Functions, Key Vault, Front Door, WAF, ADLS Gen2, Cosmos DB · EKS, Lambda, MSK, SageMaker, API GW, S3, Redshift · Terraform, Bicep, Helm, Kubernetes, Docker"],
+   en:["Cloud (Azure / AWS)","AKS, APIM, Databricks, Synapse, Event Hubs, Functions, Key Vault, Front Door, WAF, ADLS Gen2, Cosmos DB · EKS, Lambda, MSK, SageMaker, API GW, S3, Redshift · Terraform, Bicep, Helm, Kubernetes, Docker"]},
+ {ic:"🔒",fr:["Sécurité & Conformité","Zero Trust, Defense in Depth, IAM/Federation, mTLS, PKI, Key Management, OWASP, RGPD, IRM, SAML, JWT, PKCE, OAuth2/OIDC"],
+   en:["Security & Compliance","Zero Trust, Defense in Depth, IAM/Federation, mTLS, PKI, Key Management, OWASP, GDPR, IRM, SAML, JWT, PKCE, OAuth2/OIDC"]},
+ {ic:"✏️",fr:["Modélisation","BiZZdesign Enterprise Studio, SAP PowerDesigner, ArchiMate, C4/Structurizr, Visio, Lucidchart"],
+   en:["Modeling","BiZZdesign Enterprise Studio, SAP PowerDesigner, ArchiMate, C4/Structurizr, Visio, Lucidchart"]},
+ {ic:"⚙️",fr:["Dev & DevSecOps","Java/Spring Boot, Python, Scala, REST/OpenAPI, Angular, React · GitLab CI, Jenkins, SonarQube, Checkmarx, Artifactory"],
+   en:["Dev & DevSecOps","Java/Spring Boot, Python, Scala, REST/OpenAPI, Angular, React · GitLab CI, Jenkins, SonarQube, Checkmarx, Artifactory"]},
+ {ic:"🗄️",fr:["Données","Oracle, PostgreSQL, SQL Server, MongoDB, Cassandra, Elasticsearch, Cloudera/HDP (Spark, HDFS, Hive)"],
+   en:["Data","Oracle, PostgreSQL, SQL Server, MongoDB, Cassandra, Elasticsearch, Cloudera/HDP (Spark, HDFS, Hive)"]},
 ];
 
 const JOBS=[
@@ -424,7 +422,7 @@ const JOBS=[
        "Reduced cloud costs by 25% (shared landing zones, AKS/Databricks scaling) while enforcing at-rest/in-transit encryption (TLS/mTLS, Key Vault).",
        "Led cost-optimization initiatives with the SOM and Enterprise Architecture teams."]},
   meta:{fr:"<b>Livrables :</b> DAT, HLD, LLD, ADR, matrices de flux & d'impacts, dossier PRA/PCA. · <b>Env. tech. :</b> Azure AI Foundry, Azure OpenAI (GPT-4o, text-embedding-3-large), RAG / Azure AI Search, AI Gateway (APIM mode GenAI), Content Safety, Entra ID & identités managées, Private Endpoints, AKS, Databricks, Spark Structured Streaming, Event Hubs, Cosmos DB, Key Vault, Terraform, Bicep.",
-       en:"<b>Deliverables:</b> DAT, HLD, LLD, ADR, flow & impact matrices, DR/BCP plan. · <b>Tech:</b> Azure AI Foundry, Azure OpenAI (GPT-4o, text-embedding-3-large), RAG / Azure AI Search, AI Gateway (APIM GenAI mode), Content Safety, Entra ID & managed identities, Private Endpoints, AKS, Databricks, Spark Structured Streaming, Event Hubs, Cosmos DB, Key Vault, Terraform, Bicep."}},
+       en:"<b>Deliverables:</b> TAD, HLD, LLD, ADR, flow & impact matrices, DR/BCP plan. · <b>Tech:</b> Azure AI Foundry, Azure OpenAI (GPT-4o, text-embedding-3-large), RAG / Azure AI Search, AI Gateway (APIM GenAI mode), Content Safety, Entra ID & managed identities, Private Endpoints, AKS, Databricks, Spark Structured Streaming, Event Hubs, Cosmos DB, Key Vault, Terraform, Bicep."}},
 
  {co:"ENEDIS — Département Data (Chaîne de valeur Données / B4ALL)",date:{fr:"Juil 2020 – Fév 2022",en:"Jul 2020 – Feb 2022"},
   ro:{fr:"Architecte Solution Senior · Paris, France · Agile / SAFe",en:"Senior Solution Architect · Paris, France · Agile / SAFe"},
@@ -440,7 +438,7 @@ const JOBS=[
        "Modernized 7 legacy IS components (technical debt −30%); created 12 reusable patterns adopted by 5 teams (time-to-design −30%).",
        "Ran open-source benchmarks in the architecture committee (licensing costs −40%)."]},
   meta:{fr:"<b>Livrables :</b> DAG, DAT, matrices de flux, modèle de données, patterns de référence, ADR. · <b>Env. tech. :</b> Cloudera/HDP, Kafka, AWS (SageMaker, Lambda, API GW, S3), TensorFlow/Keras, Python, Spring Boot, Kubernetes, Docker.",
-       en:"<b>Deliverables:</b> DAG, DAT, flow matrices, data model, reference patterns, ADR. · <b>Tech:</b> Cloudera/HDP, Kafka, AWS (SageMaker, Lambda, API GW, S3), TensorFlow/Keras, Python, Spring Boot, Kubernetes, Docker."}},
+       en:"<b>Deliverables:</b> TAD, flow matrices, data model, reference patterns, ADR. · <b>Tech:</b> Cloudera/HDP, Kafka, AWS (SageMaker, Lambda, API GW, S3), TensorFlow/Keras, Python, Spring Boot, Kubernetes, Docker."}},
 
  {co:"Europcar Mobility Group — Click & Go",date:{fr:"Jan 2019 – Juin 2020",en:"Jan 2019 – Jun 2020"},
   ro:{fr:"Architecte Solution · Paris, France · Agile / Scrum",en:"Solution Architect · Paris, France · Agile / Scrum"},
@@ -454,7 +452,7 @@ const JOBS=[
        "Cross-cutting security architecture (Spring Security, LDAP, OAuth2) for partner and public authentication, GDPR-compliant.",
        "CI/CD pipeline (Jenkins, SonarQube, Artifactory, Newman) reducing regressions by about 45% through test automation."]},
   meta:{fr:"<b>Livrables :</b> DAT, HLD, LLD, ADR, contrats d'API (OpenAPI), dossier de sécurité. · <b>Env. tech. :</b> Java 11, Spring Boot, Kong, Microservices, Oracle, PostgreSQL, OpenShift, Docker, Angular 7.",
-       en:"<b>Deliverables:</b> DAT, HLD, LLD, ADR, API contracts (OpenAPI), security dossier. · <b>Tech:</b> Java 11, Spring Boot, Kong, Microservices, Oracle, PostgreSQL, OpenShift, Docker, Angular 7."}},
+       en:"<b>Deliverables:</b> TAD, HLD, LLD, ADR, API contracts (OpenAPI), security document. · <b>Tech:</b> Java 11, Spring Boot, Kong, Microservices, Oracle, PostgreSQL, OpenShift, Docker, Angular 7."}},
 
  {co:"RTE — Réseau de Transport d'Électricité",date:{fr:"Mai 2018 – Jan 2019",en:"May 2018 – Jan 2019"},
   ro:{fr:"Architecte Solution Technique · Paris, France · Agile / Scrum",en:"Technical Solution Architect · Paris, France · Agile / Scrum"},
@@ -464,7 +462,7 @@ const JOBS=[
      en:["Established the reference technical architecture of the GUIDE platform (50,000+ external identities) — Spring Boot + OpenLDAP + Angular — and authored the architecture vision documents, delivered with 0 critical defects.",
        "Trained and coached 12 developers in DDD, TDD, CI and design patterns, cutting the defect rate by about 40% over the following sprints."]},
   meta:{fr:"<b>Livrables :</b> Documents de vision architecturale, DAT, HLD/LLD. · <b>Env. tech. :</b> Java 8, Spring Boot, Spring LDAP, REST, Angular 6, Docker, Jenkins, OpenLDAP.",
-       en:"<b>Deliverables:</b> Architecture vision documents, DAT, HLD/LLD. · <b>Tech:</b> Java 8, Spring Boot, Spring LDAP, REST, Angular 6, Docker, Jenkins, OpenLDAP."}},
+       en:"<b>Deliverables:</b> Architecture vision documents, TAD, HLD/LLD. · <b>Tech:</b> Java 8, Spring Boot, Spring LDAP, REST, Angular 6, Docker, Jenkins, OpenLDAP."}},
 
  {co:"AFPA",date:{fr:"Jan 2017 – Avr 2018",en:"Jan 2017 – Apr 2018"},
   ro:{fr:"Architecte Applicatif & Technique / Référent technique · Paris, France · Scrum",en:"Application & Technical Architect / Technical Lead · Paris, France · Scrum"},
@@ -478,7 +476,7 @@ const JOBS=[
        "Definition of the conceptual and technical architecture of the modules involved and production of the deliverables (HLD/LLD, ADR), presented to and validated by the enterprise architecture committee.",
        "Support to the development team as technical lead, from design through to production, over a 16-month engagement."]},
   meta:{fr:"<b>Livrables :</b> DAT, HLD, LLD, modèle de données (MCD/MLD/MPD), ADR. · <b>Env. tech. :</b> Java 8, Spring Boot, Hibernate, Docker, Angular 4, SQL Server, MySQL.",
-       en:"<b>Deliverables:</b> DAT, HLD, LLD, data model (MCD/MLD/MPD), ADR. · <b>Tech:</b> Java 8, Spring Boot, Hibernate, Docker, Angular 4, SQL Server, MySQL."}},
+       en:"<b>Deliverables:</b> TAD, HLD, LLD, data model (MCD/MLD/MPD), ADR. · <b>Tech:</b> Java 8, Spring Boot, Hibernate, Docker, Angular 4, SQL Server, MySQL."}},
 
  {co:"ENEDIS — OpenData",date:{fr:"Avr 2016 – Déc 2016",en:"Apr 2016 – Dec 2016"},
   ro:{fr:"Lead Technique Big Data · Paris, France · Scrum",en:"Big Data Technical Lead · Paris, France · Scrum"},
@@ -488,7 +486,7 @@ const JOBS=[
      en:["Designed and delivered the large-scale OpenData pipeline (Spark, Hadoop), 30 datasets, 99% availability.",
        "Coached 6 junior developers (integration errors −60%)."]},
   meta:{fr:"<b>Livrables :</b> DAT, schémas de flux, spécifications techniques. · <b>Env. tech. :</b> Java 8, Spark, Hadoop, Hive, HDFS, Docker, Teradata.",
-       en:"<b>Deliverables:</b> DAT, flow diagrams, technical specs. · <b>Tech:</b> Java 8, Spark, Hadoop, Hive, HDFS, Docker, Teradata."}},
+       en:"<b>Deliverables:</b> TAD, flow diagrams, technical specs. · <b>Tech:</b> Java 8, Spark, Hadoop, Hive, HDFS, Docker, Teradata."}},
 
  {co:"Airbus Helicopters — ORION",date:{fr:"Juil 2013 – Mars 2016",en:"Jul 2013 – Mar 2016"},
   ro:{fr:"Référent & Architecte Technique Junior · Marseille, France · Agile",en:"Technical Lead & Junior Technical Architect · Marseille, France · Agile"},
@@ -498,7 +496,7 @@ const JOBS=[
      en:["Harmonized and industrialized 18 application components (duplication debt −35%).",
        "Built an API health-check (MTTR −60%); full DevOps automation (Jenkins, Nexus, Sonar, Git)."]},
   meta:{fr:"<b>Livrables :</b> DAT, schémas de déploiement, dossier d'exploitation, ADR. · <b>Env. tech. :</b> Java/JEE, REST, Angular 2, Spring Boot, Docker, Jenkins, Nexus, SonarQube.",
-       en:"<b>Deliverables:</b> DAT, deployment diagrams, operations runbook, ADR. · <b>Tech:</b> Java/JEE, REST, Angular 2, Spring Boot, Docker, Jenkins, Nexus, SonarQube."}},
+       en:"<b>Deliverables:</b> TAD, deployment diagrams, operations runbook, ADR. · <b>Tech:</b> Java/JEE, REST, Angular 2, Spring Boot, Docker, Jenkins, Nexus, SonarQube."}},
 
  {co:"SNCF — Portail Affilié CPRP",date:{fr:"Oct 2011 – Juin 2013",en:"Oct 2011 – Jun 2013"},
   ro:{fr:"Développeur Senior Java/JEE · Marseille, France · Agile",en:"Senior Java/JEE Developer · Marseille, France · Agile"},
